@@ -1,0 +1,40 @@
+/*
+*Change the appearance of the nav based on the following rules. The navbar should:
+*
+* Be fixed to the top.
+* Be 80 pixels in height
+* Be the full width of the viewport.
+* Have #00a087 as its default background colour.
+* Have #e8fdff as its default font colour.
+* The inner content should not be touching the viewport edge on the left/right edges and instead be spaced out 2ems on either side, as shown below.
+* Tip: Specify left/right padding but leave top/bottom padding at 0px
+*/
+
+#nav-bar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+  height: 80px;
+  display: block;
+  background-color: #00a087;
+  color: #e8fdff;
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-bottom: 20px
+
+}
+
+#nav-bar .header {
+  font-size: 2em;
+  float: left;
+  line-height: 80px;
+}
+
+#nav-bar .logo {
+  float: left;
+  width: 70px;
+  height: 70px;
+  color: #e8fdff;
+}
