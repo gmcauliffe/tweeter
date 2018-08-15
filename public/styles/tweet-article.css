@@ -59,11 +59,11 @@ article.tweet footer {
   font-size: 0.75em;
 }
 
-.showme {
+.indicators {
 display: none;
 }
 
-.showhim:hover .showme {
+.showIndicators:hover .indicators {
 display : inline;
 float: right;
 color: #00a087;
