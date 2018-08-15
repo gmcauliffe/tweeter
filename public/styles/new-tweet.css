@@ -9,7 +9,7 @@ section.new-tweet {
   border-radius: 0.5rem;
 }
 
-h2 {
+section.new-tweet h2 {
   border-bottom: solid;
   border-width: thin;
 }
