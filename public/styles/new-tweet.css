@@ -5,7 +5,7 @@ section.new-tweet {
   margin-top: 30px;
   margin-right: 2em;
   margin-left: 2em;
-  padding: 1em;
+  padding: 0.5em;
   border-radius: 0.5rem;
 }
 
@@ -27,4 +27,8 @@ textarea {
 
 input {
   margin: 0.5em;
+}
+
+.exceedLimit {
+  color: red;
 }
