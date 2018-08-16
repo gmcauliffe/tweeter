@@ -1,7 +1,9 @@
 $(document).ready(function() {
 
+// Hide error messages on load
   $( ".error" ).hide();
 
+// GET request to load tweets
   function loadTweets() {
     $.ajax({
       url: "/tweets",
@@ -17,15 +19,14 @@ $(document).ready(function() {
 
   loadTweets();
 
-
+// Show/hide Compose Tweet section using "Compose" button
   $( "#compose-button" ).click(function() {
     $( "section.new-tweet" ).slideToggle( "slow", function() {
     $("#tweet-text").focus();
+    });
   });
 
-
-  });
-
+//Compose new tweet input management
   $('form#newTweetForm').on( "submit", function(event) {
     event.preventDefault();
     let newTweet = $(this).serialize();
@@ -48,7 +49,7 @@ $(document).ready(function() {
     }
   });
 
-
+// Render new tweets by adding them to the main tweets-container
   function renderTweets(tweets) {
     for (var i =0; i < tweets.length; i++) {
       console.log(tweets[i]);
@@ -63,7 +64,7 @@ $(document).ready(function() {
     return Math.floor(days);
   }
 
-
+// Converting tweet object into organised formatted jQuery object
   function createTweetElement(tweetObject) {
     let $tweet = $('<article>').addClass('tweet showIndicators');
 
