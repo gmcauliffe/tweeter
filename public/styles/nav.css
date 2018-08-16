@@ -37,6 +37,7 @@
   width: 70px;
   height: 70px;
   color: #e8fdff;
+  margin-left: 2em;
 }
 
 button.nav-bar-button {
@@ -46,7 +47,7 @@ button.nav-bar-button {
   background-color: white;
   color: #00a087;
   margin-top: 10px;
-  margin-right: 10px;
+  margin-right: 2em;
   border: solid;
   border-color: #7f8da3;
   border-width: thin;

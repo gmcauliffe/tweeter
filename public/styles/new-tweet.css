@@ -32,3 +32,23 @@ input {
 .exceedLimit {
   color: red;
 }
+
+.empty-warning, .exceed-error {
+  margin: 10px 0px;
+  padding:12px;
+}
+
+.empty-warning {
+    color: #9F6000;
+    background-color: #FEEFB3;
+}
+.exceed-error {
+    color: #D8000C;
+    background-color: #FFD2D2;
+}
+
+.empty-warning i, .exceed-error i {
+    margin: 20px 5px;
+    font-size: 2em;
+    vertical-align: middle;
+}

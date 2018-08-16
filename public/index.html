@@ -38,10 +38,21 @@
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
         <form id="newTweetForm" action="/tweets" method="POST">
-          <textarea name="text" id="tweettext" placeholder="What are you humming about?"></textarea>
+          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
+
+        <div class="error empty-warning">
+          <i>&#x26A0;</i>
+          What would you like to tweet?<br>
+
+        </div>
+
+        <div class="error exceed-error">
+          <i>&#x2297;</i>
+          Your tweet should be less than 140 characters. Please try again.
+        </div>
       </section>
 
       <section id="tweets-container">

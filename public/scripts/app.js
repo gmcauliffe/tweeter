@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-
+  $( ".error" ).hide();
 
   function loadTweets() {
     $.ajax({
@@ -17,9 +17,10 @@ $(document).ready(function() {
 
   loadTweets();
 
+
   $( "#compose-button" ).click(function() {
     $( "section.new-tweet" ).slideToggle( "slow", function() {
-    // Animation complete.
+    $("#tweet-text").focus();
   });
 
 
@@ -28,11 +29,17 @@ $(document).ready(function() {
   $('form#newTweetForm').on( "submit", function(event) {
     event.preventDefault();
     let newTweet = $(this).serialize();
-    var tweet = $('#tweettext').val();
-    if (tweet.trim().length < 1) {
-      alert("What would you like to tweet?");
+    var tweet = $('#tweet-text').val();
+    if ( tweet.trim().length < 1 ) {
+      $( ".empty-warning" ).show("slow");
+      $("#tweet-text").click(function() {
+        $( ".error" ).hide("slow");
+      });
     } else if (tweet.length > 140) {
-      alert("Your tweet should be less than 140 characters.\nPlease try again.");
+      $( ".exceed-error" ).show("slow");
+      $("#tweet-text").click(function() {
+        $( ".error" ).hide("slow");
+      });
     } else {
       $.post('/tweets', newTweet).done(function() {
         loadTweets();
