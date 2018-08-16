@@ -21,13 +21,13 @@ $(document).ready(function() {
   $('form#newTweetForm').on( "submit", function(event) {
     event.preventDefault();
     let newTweet = $(this).serialize();
-    console.log("This is type : ", newTweet);
-    if ($(this).val().trim().length < 1) {
+    var tweet = $('#tweettext').val();
+    if (tweet.trim().length < 1) {
       alert("What would you like to tweet?");
-    } else if (newTweet.length > 140) {
+    } else if (tweet.length > 140) {
       alert("Your tweet should be less than 140 characters.\nPlease try again.");
     } else {
-      $.post('/tweets', newTweet).done(function(tweet) {
+      $.post('/tweets', newTweet).done(function() {
         loadTweets();
         $('form#newTweetForm textarea').val('');
       });
