@@ -38,3 +38,30 @@
   height: 70px;
   color: #e8fdff;
 }
+
+button.nav-bar-button {
+  font-size: 1em;
+  float: right;
+  line-height: 50px;
+  background-color: white;
+  color: #00a087;
+  margin-top: 10px;
+  margin-right: 10px;
+  border: solid;
+  border-color: #7f8da3;
+  border-width: thin;
+  border-radius: 0.5rem;
+  opacity: 0.7;
+}
+
+/*img.nav-bar-button {
+  margin-top: 1em;
+  width: 1em;
+  height: 1em;
+  color: #00a087;
+}*/
+
+.nav-bar-button:hover {
+  opacity: 0.9;
+  color: black;
+}

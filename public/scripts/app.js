@@ -17,6 +17,13 @@ $(document).ready(function() {
 
   loadTweets();
 
+  $( "#compose-button" ).click(function() {
+    $( "section.new-tweet" ).slideToggle( "slow", function() {
+    // Animation complete.
+  });
+
+
+  });
 
   $('form#newTweetForm').on( "submit", function(event) {
     event.preventDefault();

@@ -37,6 +37,7 @@ article.tweet h2 {
 
 article.tweet h4 {
   float: right;
+  margin-right: 10px;
   line-height: 0px;
   font-style: none;
 }
