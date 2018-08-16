@@ -11,13 +11,9 @@ article.tweet {
   opacity: 0.5;
 }
 
-
 article.tweet:hover {
   opacity: 1;
 }
-/*.hover {
-  opacity: 1;
-}*/
 
 article.tweet header {
   background-color: #eee;
@@ -30,6 +26,8 @@ article.tweet .avatar {
   float: left;
   width: 60px;
   height: 60px;
+  border-top-left-radius: 0.5rem;
+
 }
 
 article.tweet h2 {
