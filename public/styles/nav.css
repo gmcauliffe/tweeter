@@ -1,14 +1,4 @@
-/*
-*Change the appearance of the nav based on the following rules. The navbar should:
-*
-* Be fixed to the top.
-* Be 80 pixels in height
-* Be the full width of the viewport.
-* Have #00a087 as its default background colour.
-* Have #e8fdff as its default font colour.
-* The inner content should not be touching the viewport edge on the left/right edges and instead be spaced out 2ems on either side, as shown below.
-* Tip: Specify left/right padding but leave top/bottom padding at 0px
-*/
+/*Navigation Bar Styling*/
 
 #nav-bar {
   position: fixed;
@@ -23,7 +13,6 @@
   padding-left: 2em;
   padding-right: 2em;
   margin-bottom: 20px
-
 }
 
 #nav-bar .header {
@@ -54,13 +43,6 @@ button.nav-bar-button {
   border-radius: 0.5rem;
   opacity: 0.7;
 }
-
-/*img.nav-bar-button {
-  margin-top: 1em;
-  width: 1em;
-  height: 1em;
-  color: #00a087;
-}*/
 
 .nav-bar-button:hover {
   opacity: 0.9;

@@ -1,4 +1,4 @@
-
+/*Compose New-Tweet Section Styling*/
 
 section.new-tweet {
   background-color: #eee;
@@ -39,16 +39,16 @@ input {
 }
 
 .empty-warning {
-    color: #9F6000;
-    background-color: #FEEFB3;
+  color: #9F6000;
+  background-color: #FEEFB3;
 }
 .exceed-error {
-    color: #D8000C;
-    background-color: #FFD2D2;
+  color: #D8000C;
+  background-color: #FFD2D2;
 }
 
 .empty-warning i, .exceed-error i {
-    margin: 20px 5px;
-    font-size: 2em;
-    vertical-align: middle;
+  margin: 20px 5px;
+  font-size: 2em;
+  vertical-align: middle;
 }

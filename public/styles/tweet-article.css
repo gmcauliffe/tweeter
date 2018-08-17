@@ -1,4 +1,4 @@
-
+/*Tweet Post Styling*/
 
 article.tweet {
   border: solid;
@@ -59,12 +59,12 @@ article.tweet footer {
 }
 
 .indicators {
-display: none;
+  display: none;
 }
 
 .showIndicators:hover .indicators {
-display : inline;
-float: right;
-color: #00a087;
-font-size: 1.5em;
+  display : inline;
+  float: right;
+  color: #00a087;
+  font-size: 1.5em;
 }
