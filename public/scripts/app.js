@@ -19,6 +19,8 @@ $(document).ready(function() {
 
   loadTweets();
 
+
+
 // Show/hide Compose Tweet section using "Compose" button
   $( "#compose-button" ).click(function() {
     $( "section.new-tweet" ).slideToggle( "slow", function() {
@@ -52,15 +54,15 @@ $(document).ready(function() {
 // Render new tweets by adding them to the main tweets-container
   function renderTweets(tweets) {
     for (var i =0; i < tweets.length; i++) {
-      console.log(tweets[i]);
       var newTweet = createTweetElement(tweets[i]);
-      $('#tweets-container').append(newTweet);
+      $('#tweets-container').prepend(newTweet);
     }
   }
 
 
   function convertToDays(milliseconds) {
-    var days = (milliseconds / (1000*60*60*24));
+    var msPassed = Date.now() - milliseconds;
+    var days = (msPassed / (1000*60*60*24));
     return Math.floor(days);
   }
 
