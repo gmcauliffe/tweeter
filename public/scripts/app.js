@@ -9,7 +9,10 @@ $(document).ready(function() {
       url: "/tweets",
       method: 'GET',
       success: function(result) {
-        renderTweets(result);
+        $('#tweets-container').empty();
+        for (var i =0; i < result.length; i++) {
+          renderTweets(result[i]);
+        }
       },
       error: function(err) {
         console.log("there was an error", err);
@@ -45,18 +48,16 @@ $(document).ready(function() {
       });
     } else {
       $.post('/tweets', newTweet).done(function() {
-        loadTweets();
         $('form#newTweetForm textarea').val('');
+        loadTweets();
       });
     }
   });
 
 // Render new tweets by adding them to the main tweets-container
-  function renderTweets(tweets) {
-    for (var i =0; i < tweets.length; i++) {
-      var newTweet = createTweetElement(tweets[i]);
+  function renderTweets(tweet) {
+      var newTweet = createTweetElement(tweet);
       $('#tweets-container').prepend(newTweet);
-    }
   }
 
 
