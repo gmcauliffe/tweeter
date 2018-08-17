@@ -1,9 +1,7 @@
 $(document).ready(function() {
 
-// Hide error messages on load
-  $( ".error" ).hide();
 
-// GET request to load tweets
+  // GET request to load tweets
   function loadTweets() {
     $.ajax({
       url: "/tweets",
@@ -20,18 +18,20 @@ $(document).ready(function() {
     });
   }
 
+  // Load tweets on page load
   loadTweets();
 
+  // Hide error messages on load
+  $( ".error" ).hide();
 
-
-// Show/hide Compose Tweet section using "Compose" button
+  // Show/hide Compose Tweet ("new-tweet") section using "Compose" button
   $( "#compose-button" ).click(function() {
     $( "section.new-tweet" ).slideToggle( "slow", function() {
     $("#tweet-text").focus();
     });
   });
 
-//Compose new tweet input management
+  //Manages the submission of a new tweet from the newTweetForm
   $('form#newTweetForm').on( "submit", function(event) {
     event.preventDefault();
     let newTweet = $(this).serialize();
@@ -55,20 +55,20 @@ $(document).ready(function() {
     }
   });
 
-// Render new tweets by adding them to the main tweets-container
+  // Render new tweets by adding them to the main tweets-container
   function renderTweets(tweet) {
       var newTweet = createTweetElement(tweet);
       $('#tweets-container').prepend(newTweet);
   }
 
-
+  // Used in "createTweetElement" function to generate days since post in footer
   function convertToDays(milliseconds) {
     var msPassed = Date.now() - milliseconds;
     var days = (msPassed / (1000*60*60*24));
     return Math.floor(days);
   }
 
-// Converting tweet object into organised formatted jQuery object
+  // Converts tweet object into organised formatted jQuery object ready for rendering
   function createTweetElement(tweetObject) {
     let $tweet = $('<article>').addClass('tweet showIndicators');
 
@@ -89,5 +89,5 @@ $(document).ready(function() {
     return $tweet;
    }
 
-
+// End of Document Ready function
 });

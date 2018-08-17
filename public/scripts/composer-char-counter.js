@@ -1,3 +1,5 @@
+// Function for character counter on Compose Tweet ("new-tweet") form
+
 $(document).ready(function() {
   var composeTweet = $('textarea[name=text]');
   composeTweet.on("input", function() {
