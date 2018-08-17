@@ -50,6 +50,7 @@ $(document).ready(function() {
       $.post('/tweets', newTweet).done(function() {
         $('form#newTweetForm textarea').val('');
         loadTweets();
+        $('textarea[name=text]').siblings(".counter").text(140);
       });
     }
   });
@@ -79,7 +80,7 @@ $(document).ready(function() {
     $header.append('<h4>' + tweetObject.user.handle + '</h4>');
     $header.append(`<img class="avatar" src="${tweetObject.user.avatars.small}">`);
 
-    $footer.append("<p>" + days + " days ago<span class='indicators'>&#9873; &#8644; &hearts;</span></p>");
+    $footer.append("<p>" + days + " days ago<span class='indicators'>&#9873; &#10227; &hearts;</span></p>");
 
     $tweet.append($header);
     $tweet.append($main);
