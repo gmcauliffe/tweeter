@@ -1,8 +1,9 @@
 /*Compose New-Tweet Section Styling*/
 
 section.new-tweet {
+  display: none;
   background-color: #eee;
-  margin-top: 30px;
+  margin-top: 10px;
   margin-right: 2em;
   margin-left: 2em;
   padding: 0.5em;
