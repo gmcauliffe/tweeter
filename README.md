@@ -5,6 +5,11 @@ Tweeter is a simple, single-page Twitter clone. The sleek interface allows users
 Front-end: HTML, CSS, JS, jQuery and AJAX.
 Back-end: Node, Express and MongoDB.
 
+## Final Product
+
+!["Screenshot of Tweeter posts page"](https://github.com/gmcauliffe/tweeter/blob/master/docs/tweeter-posts.png?raw=true)
+!["Screenshot of Tweeter compose form revealed"](https://github.com/gmcauliffe/tweeter/blob/master/docs/tweeter-form.png?raw=true)
+
 ## Getting Started
 
 1. Fork this repository, then clone your fork of this repository.
